@@ -1,0 +1,20 @@
+.footer-contacts {
+  &__title {
+    @include textGradient;
+    font-size: clamp(1rem, 5vw, 1.5rem);
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+  }
+  &__item {
+    color: $text-default-light;
+    &:not(:last-child) {
+      margin-bottom: 0.8rem;
+    }
+  }
+  &__link {
+    &--form {
+      text-decoration: underline;
+    }
+  }
+}

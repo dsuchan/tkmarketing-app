@@ -1,0 +1,28 @@
+.footer {
+  background-image: linear-gradient($bg-default-dark-2, $bg-default-dark-3);
+  &__content {
+    @include md-up {
+      @include flexContainer(row, center, flex-end);
+    }
+  }
+  &__logo {
+    text-align: center;
+    margin: 4rem 0;
+    @include md-up {
+      text-align: left;
+      width: 40%;
+    }
+  }
+  &__cols {
+    @include flexContainer(row, center, center);
+    gap: 15%;
+    margin-bottom: 2.5rem;
+    @include md-up {
+      width: 60%;
+      justify-content: flex-end;
+    }
+  }
+  &__author {
+    font-size: clamp(0.5rem, 2vw, 0.75rem);
+  }
+}

@@ -1,0 +1,22 @@
+.cta {
+  position: relative; // for particles
+  min-height: 50vh;
+  @include flexContainer(column, center, center);
+  &__wrapper {
+    @include flexContainer(column, center, center);
+  }
+  &__heading {
+    font-size: clamp(1.5rem, 3vw, 2.625rem);
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+    text-align: center;
+    margin-bottom: 4rem;
+    @include md-down {
+      margin-bottom: 3rem;
+    }
+  }
+  &__btn {
+    font-size: 1rem;
+  }
+}

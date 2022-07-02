@@ -1,0 +1,10 @@
+.section-subtitle {
+  font-size: clamp(14px, 2vw, 18px);
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 6rem;
+  margin-bottom: 0.5rem;
+  @include textGradient;
+}

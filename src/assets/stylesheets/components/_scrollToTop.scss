@@ -1,0 +1,20 @@
+.to-top {
+  background: linear-gradient($gradient-dark-2, $gradient-light-2);
+  position: fixed;
+  bottom: 1rem;
+  right: 2rem;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s;
+}
+.to-top.active {
+  bottom: 2rem;
+  pointer-events: auto;
+  opacity: 1;
+}

@@ -1,0 +1,31 @@
+// Display
+@mixin flexContainer($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+@mixin textGradient {
+  background: linear-gradient(
+    94.07deg,
+    $gradient-dark-1 0%,
+    $gradient-light-1 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+@mixin buttonGradient {
+  background: linear-gradient(
+    94.07deg,
+    $gradient-dark-2 0%,
+    $gradient-light-2 100%
+  );
+  color: $text-default-light;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 0.75rem 1rem;
+  border-top-right-radius: 0.9375rem;
+  border-bottom-left-radius: 0.9375rem;
+}

@@ -1,0 +1,41 @@
+.contact {
+  min-height: 92vh;
+  @include flexContainer(column, center, center);
+  position: relative;
+  padding-bottom: 4rem;
+  background-image: linear-gradient($bg-default-dark-2, $bg-default-dark-4);
+  z-index: 10;
+  &__header {
+    min-height: 8vh;
+    @include flexContainer(row, flex-start, center);
+  }
+  &__content-wrapper {
+    @include flexContainer(column, center, center);
+    @include lg-up {
+      @include flexContainer(row, space-between, center);
+    }
+  }
+  &__heading > * {
+    font-size: clamp(2rem, 4vw, 4rem) !important;
+    line-height: 1.4;
+    letter-spacing: 3px;
+    text-align: center;
+    @include lg-up {
+      text-align: left;
+    }
+  }
+  &__heading {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    @include lg-up {
+      margin: 0;
+    }
+
+    &--subtitle {
+      font-weight: 400;
+    }
+    &--end {
+      @include textGradient;
+    }
+  }
+}

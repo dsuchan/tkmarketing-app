@@ -1,0 +1,19 @@
+.gdpr-header {
+  min-height: 8vh;
+  margin-top: 0.5rem;
+}
+.gdpr-content {
+  &__heading {
+    margin-bottom: 2rem;
+  }
+  &__item {
+    margin-bottom: 1rem;
+  }
+  &__title,
+  &__subtitle {
+    margin-bottom: 0.5rem;
+  }
+  &__text {
+    line-height: 1.6;
+  }
+}

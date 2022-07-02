@@ -1,0 +1,115 @@
+.form {
+  background-color: $bg-default-dark-2;
+  border: 1px solid $text-default-dark;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  padding: 1.5rem !important;
+  @include lg-up {
+    width: 50%;
+  }
+  &__title {
+    @include textGradient;
+    margin-bottom: 1.5rem;
+  }
+  &__btn {
+    width: 100%;
+    @include lg-up {
+      width: auto;
+    }
+  }
+}
+.input-fields {
+  &__information {
+    margin-bottom: 2rem;
+  }
+  &__message {
+    margin-bottom: 0.8rem;
+  }
+  &__title {
+    @include textGradient;
+    margin-bottom: 1rem;
+  }
+  &__input {
+    position: relative;
+    width: 100%;
+    padding: 1rem;
+    background: transparent;
+    color: $text-default-light;
+    border: 2px solid $form-border;
+    outline: none;
+    &:not(:first-child) {
+      margin-top: 0.8rem;
+    }
+    &::placeholder {
+      color: $text-default-dark;
+      letter-spacing: 1px;
+      font-size: clamp(0.8rem, 1vw, 1rem);
+    }
+  }
+  &__error-message {
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-top: 0.25rem;
+    color: $form-error;
+  }
+}
+.radio-buttons {
+  @include flexContainer(column, center, flex-start);
+  @include md-up {
+    @include flexContainer(row, flex-start, center);
+  }
+  margin-bottom: 2rem;
+  &__item {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+    @include md-up {
+      &:not(:last-child) {
+        margin-right: 4rem;
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__input {
+    display: none;
+    &--inside {
+      box-sizing: border-box;
+      width: 1.25em;
+      height: 1.25em;
+      border: 2px solid $form-border;
+      border-radius: 50%;
+      margin-right: 10px;
+      padding: 2px;
+      &::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          94.07deg,
+          $gradient-dark-1 0%,
+          $gradient-light-1 100%
+        );
+        border-radius: 50%;
+        transform: scale(0);
+        transition: transform 0.15s;
+      }
+    }
+  }
+  &__input:checked + .radio-buttons__input--inside::after {
+    transform: scale(1);
+  }
+}
+.gdpr-info {
+  margin-bottom: 2rem;
+  &__text {
+    font-size: clamp(10px, 1vw, 12px);
+    letter-spacing: 1px;
+    &--link {
+      text-decoration: underline;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.partners {
+  min-height: fit-content;
+  background-image: url("/src/assets/illustrations/triangle_bg.png");
+  background-position: center;
+  background-size: cover;
+  &__grid {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 0 0 1;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1.5rem;
+    padding-top: 3rem;
+    padding-bottom: 6rem;
+    @media (min-width: 480px) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      justify-items: center;
+      gap: 3rem;
+      .partners__item {
+        width: 9.375rem;
+      }
+    }
+  }
+}

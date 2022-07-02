@@ -1,0 +1,21 @@
+.footer-some {
+  &__title {
+    @include textGradient;
+    font-size: clamp(1rem, 5vw, 1.5rem);
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+  }
+  &__item {
+    color: $text-default-light;
+    &:not(:last-child) {
+      margin-bottom: 0.8rem;
+    }
+  }
+  &__link {
+    @include flexContainer(row, flex-start, flex-start);
+  }
+  &__icon {
+    margin-right: 0.35rem;
+  }
+}

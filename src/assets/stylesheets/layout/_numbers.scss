@@ -1,0 +1,33 @@
+.numbers-wrapper {
+  @include flexContainer(row, space-around, center);
+  @include md-down {
+    justify-content: space-between;
+  }
+}
+.numbers {
+  min-height: 30vh;
+  display: flex;
+  align-items: center;
+  background-image: url("/src/assets/illustrations/triangle_bg.png");
+  background-position: center;
+  background-size: cover;
+  @include md-down {
+    min-height: 20vh;
+  }
+}
+.numbers-item {
+  text-align: center;
+  &__number {
+    display: flex;
+    justify-content: center;
+    font-size: clamp(2rem, 5vw, 4.5rem);
+    letter-spacing: 0.5px;
+    @include textGradient;
+  }
+  &__label {
+    font-size: clamp(0.5rem, 1.5vw, 1.125rem);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: $text-default-light;
+  }
+}

@@ -1,0 +1,26 @@
+.hero {
+  min-height: 92vh;
+  overflow: hidden;
+  @include flexContainer(column, center, center);
+  text-align: center;
+  &__content {
+    margin-bottom: 6rem;
+    @include lg-up {
+      margin-bottom: 4rem;
+    }
+  }
+  &__title {
+    font-size: clamp(2.625rem, 5vw, 4rem);
+    letter-spacing: 2px;
+  }
+  &__subtitle {
+    font-size: clamp(1rem, 2vw, 1.75rem);
+    font-weight: 100;
+    letter-spacing: 2px;
+    margin-top: 1.5rem;
+    color: $text-default-dark;
+    @include md-down {
+      margin-bottom: 2rem;
+    }
+  }
+}
